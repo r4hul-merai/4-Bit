@@ -68,25 +68,2069 @@ type Savings = {
 // Static fallback DB (full list – paste all 10+ medicines here)
 // ──────────────────────────────────────────────────────────────────────
 const staticDatabase: Medicine[] = [
+   {
+    "id": 1,
+    "brand_name": "Augmentin 1000 Duo",
+    "generic_name": "Amoxycillin + Clavulanic Acid",
+    "composition": [
+      { "ingredient": "Amoxycillin", "strength": "875", "unit": "mg" },
+      { "ingredient": "Clavulanic Acid", "strength": "125", "unit": "mg" }
+    ],
+    "composition_hash": "amoxycillin_875mg+clavulanic_acid_125mg",
+    "manufacturer": "GlaxoSmithKline Pharmaceuticals Ltd",
+    "price": 553,
+    "form": "Tablet",
+    "pack_size": 6,
+    "uses": [
+      "Bacterial infections of lungs",
+      "Ear infections",
+      "Nasal sinus infections",
+      "Urinary tract infections",
+      "Skin and soft tissue infections"
+    ],
+    "side_effects": [
+      "Nausea",
+      "Vomiting",
+      "Diarrhea",
+      "Rash"
+    ],
+    "prescription_required": true,
+    "what_it_does": "Amoxicillin kills bacteria by inhibiting cell wall synthesis. Clavulanic acid prevents bacterial resistance by inhibiting beta-lactamase enzymes.",
+    "contraindications": [
+      "Hypersensitivity to penicillins or cephalosporins",
+      "History of cholestatic jaundice/hepatic dysfunction with this combination"
+    ],
+    "drug_interactions": [
+      "Probenecid (increases amoxicillin levels)",
+      "Warfarin (increased bleeding risk)",
+      "Oral contraceptives (reduced efficacy)"
+    ],
+    "dosage": "1 tablet twice daily for 5–14 days depending on infection severity.",
+    "storage": "Store below 25°C in a dry place. Protect from moisture."
+  },
   {
-    id: 1,
-    brand_name: "Crocin 650",
-    generic_name: "Paracetamol",
-    composition: [{ ingredient: "Paracetamol", strength: "650", unit: "mg" }],
-    composition_hash: "paracetamol_650mg",
-    manufacturer: "GSK",
-    price: 25,
-    form: "Tablet",
-    pack_size: 15,
-    uses: ["Fever", "Headache", "Body pain", "Cold symptoms"],
-    side_effects: ["Nausea", "Allergic reactions (rare)", "Liver damage (overdose)", "Skin rash"],
-    prescription_required: false,
-    what_it_does:
-      "Paracetamol works by blocking the production of prostaglandins in the brain, which are chemicals that cause pain and fever. It reduces body temperature during fever and provides relief from mild to moderate pain.",
-    contraindications: ["Severe liver disease", "Allergy to paracetamol", "Chronic alcoholism"],
-    drug_interactions: ["Warfarin (blood thinner)", "Carbamazepine", "Phenytoin", "Alcohol"],
-    dosage: "Adults: 1-2 tablets every 4-6 hours. Maximum 4g per day.",
-    storage: "Store below 25°C in a dry place",
+    "id": 2,
+    "brand_name": "Glycomet-GP 1",
+    "generic_name": "Glimepiride + Metformin",
+    "composition": [
+      { "ingredient": "Glimepiride", "strength": "1", "unit": "mg" },
+      { "ingredient": "Metformin", "strength": "500", "unit": "mg" }
+    ],
+    "composition_hash": "glimepiride_1mg+metformin_500mg",
+    "manufacturer": "USV Ltd",
+    "price": 107,
+    "form": "Tablet",
+    "pack_size": 15,
+    "uses": [
+      "Control blood sugar levels in type 2 diabetes"
+    ],
+    "side_effects": [
+      "Hypoglycemia",
+      "Nausea",
+      "Stomach pain"
+    ],
+    "prescription_required": true,
+    "what_it_does": "Glimepiride stimulates insulin release from pancreas. Metformin reduces hepatic glucose production and improves insulin sensitivity.",
+    "contraindications": [
+      "Type 1 diabetes",
+      "Diabetic ketoacidosis",
+      "Severe renal impairment (eGFR <30 mL/min)",
+      "Acute or chronic metabolic acidosis"
+    ],
+    "drug_interactions": [
+      "Beta-blockers (mask hypoglycemia symptoms)",
+      "NSAIDs (increased hypoglycemia risk)",
+      "Fluconazole (increased glimepiride effect)"
+    ],
+    "dosage": "1 tablet once or twice daily with meals. Titrate based on blood glucose.",
+    "storage": "Store below 30°C. Protect from light and moisture."
+  },
+  {
+    "id": 3,
+    "brand_name": "Human Mixtard 70/30",
+    "generic_name": "Insulin Isophane + Soluble Insulin",
+    "composition": [
+      { "ingredient": "Insulin Isophane", "strength": "70", "unit": "%" },
+      { "ingredient": "Soluble Insulin", "strength": "30", "unit": "%" }
+    ],
+    "composition_hash": "insulin_isophane_70%+soluble_insulin_30%",
+    "manufacturer": "Novo Nordisk India Pvt Ltd",
+    "price": 463,
+    "form": "Injection",
+    "pack_size": 1,
+    "uses": [
+      "Blood sugar control in diabetes mellitus"
+    ],
+    "side_effects": [
+      "Hypoglycemia",
+      "Injection site reactions"
+    ],
+    "prescription_required": true,
+    "what_it_does": "70% intermediate-acting insulin isophane provides basal coverage; 30% fast-acting soluble insulin covers post-meal spikes.",
+    "contraindications": [
+      "Hypoglycemia",
+      "Hypersensitivity to insulin"
+    ],
+    "drug_interactions": [
+      "Beta-blockers (mask hypoglycemia)",
+      "Corticosteroids (increase blood glucose)",
+      "Alcohol (unpredictable glucose effects)"
+    ],
+    "dosage": "Individualized; typically 0.5–1 unit/kg/day divided in 1–2 injections.",
+    "storage": "Unopened: 2–8°C (refrigerate). In-use: below 30°C for 4 weeks."
+  },
+  {
+    "id": 4,
+    "brand_name": "Lantus",
+    "generic_name": "Insulin Glargine",
+    "composition": [
+      { "ingredient": "Insulin Glargine", "strength": "100", "unit": "IU" }
+    ],
+    "composition_hash": "insulin_glargine_100iu",
+    "manufacturer": "Sanofi India Ltd",
+    "price": 544,
+    "form": "Injection",
+    "pack_size": 1,
+    "uses": [
+      "Long-acting insulin for diabetes sugar control"
+    ],
+    "side_effects": [
+      "Hypoglycemia",
+      "Weight gain"
+    ],
+    "prescription_required": true,
+    "what_it_does": "Provides steady 24-hour basal insulin with no pronounced peak.",
+    "contraindications": [
+      "Hypoglycemia",
+      "Allergy to insulin glargine"
+    ],
+    "drug_interactions": [
+      "Oral antidiabetics (additive hypoglycemia)",
+      "Thiazolidinediones (fluid retention risk)",
+      "Alcohol"
+    ],
+    "dosage": "Once daily at any time, same time each day. Start 10 units or 0.2 unit/kg.",
+    "storage": "Unopened: 2–8°C. In-use: below 30°C for 28 days."
+  },
+  {
+    "id": 5,
+    "brand_name": "Himalaya Liv. 52 DS",
+    "generic_name": "Caper Bush + Chicory",
+    "composition": [
+      { "ingredient": "Caper Bush", "strength": "", "unit": "" },
+      { "ingredient": "Chicory", "strength": "", "unit": "" }
+    ],
+    "composition_hash": "caper_bush+chicory",
+    "manufacturer": "The Himalaya Drug Company",
+    "price": 256,
+    "form": "Tablet",
+    "pack_size": 60,
+    "uses": [
+      "Liver health support",
+      "Detoxification",
+      "Appetite improvement"
+    ],
+    "side_effects": [
+      "Rare allergic reactions"
+    ],
+    "prescription_required": false,
+    "what_it_does": "Herbal formulation that protects liver cells, promotes regeneration, and improves appetite.",
+    "contraindications": [
+      "Pregnancy (consult physician)",
+      "Known allergy to ingredients"
+    ],
+    "drug_interactions": [
+      "Minimal reported"
+    ],
+    "dosage": "2 tablets twice daily or as directed by physician.",
+    "storage": "Store in cool, dry place away from sunlight."
+  },
+  {
+    "id": 6,
+    "brand_name": "Monocef-O CV",
+    "generic_name": "Cefpodoxime Proxetil + Clavulanic Acid",
+    "composition": [
+      { "ingredient": "Cefpodoxime Proxetil", "strength": "200", "unit": "mg" },
+      { "ingredient": "Clavulanic Acid", "strength": "125", "unit": "mg" }
+    ],
+    "composition_hash": "cefpodoxime_proxetil_200mg+clavulanic_acid_125mg",
+    "manufacturer": "Aristo Pharmaceuticals Pvt Ltd",
+    "price": 314,
+    "form": "Tablet",
+    "pack_size": 10,
+    "uses": [
+      "Respiratory tract infections",
+      "Ear infections",
+      "Urinary tract infections",
+      "Skin infections"
+    ],
+    "side_effects": [
+      "Nausea",
+      "Diarrhea",
+      "Headache"
+    ],
+    "prescription_required": true,
+    "what_it_does": "Cefpodoxime is a 3rd-gen cephalosporin; clavulanic acid extends spectrum against beta-lactamase producers.",
+    "contraindications": [
+      "Hypersensitivity to cephalosporins/penicillins",
+      "History of cholestatic jaundice"
+    ],
+    "drug_interactions": [
+      "Probenecid (increases cefpodoxime levels)",
+      "Antacids (reduce absorption)"
+    ],
+    "dosage": "1 tablet twice daily for 5–10 days.",
+    "storage": "Store below 30°C. Protect from moisture."
+  },
+  {
+    "id": 7,
+    "brand_name": "Janumet",
+    "generic_name": "Sitagliptin + Metformin",
+    "composition": [
+      { "ingredient": "Sitagliptin", "strength": "50", "unit": "mg" },
+      { "ingredient": "Metformin", "strength": "1000", "unit": "mg" }
+    ],
+    "composition_hash": "metformin_1000mg+sitagliptin_50mg",
+    "manufacturer": "MSD Pharmaceuticals Pvt Ltd",
+    "price": 312,
+    "form": "Tablet",
+    "pack_size": 15,
+    "uses": [
+      "Blood sugar control in type 2 diabetes"
+    ],
+    "side_effects": [
+      "Nausea",
+      "Hypoglycemia",
+      "Upper respiratory infection"
+    ],
+    "prescription_required": true,
+    "what_it_does": "Sitagliptin inhibits DPP-4 to prolong incretin action; metformin reduces glucose production and improves sensitivity.",
+    "contraindications": [
+      "Severe renal impairment",
+      "Acute/chronic metabolic acidosis",
+      "Type 1 diabetes"
+    ],
+    "drug_interactions": [
+      "Digoxin (slightly increased levels)",
+      "Cationic drugs (compete with metformin renal excretion)"
+    ],
+    "dosage": "1 tablet twice daily with meals.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 8,
+    "brand_name": "Foracort Forte",
+    "generic_name": "Formoterol + Budesonide",
+    "composition": [
+      { "ingredient": "Formoterol", "strength": "12", "unit": "mcg" },
+      { "ingredient": "Budesonide", "strength": "400", "unit": "mcg" }
+    ],
+    "composition_hash": "budesonide_400mcg+formoterol_12mcg",
+    "manufacturer": "Cipla Ltd",
+    "price": 800,
+    "form": "Inhaler",
+    "pack_size": 1,
+    "uses": [
+      "Asthma management",
+      "COPD symptoms prevention"
+    ],
+    "side_effects": [
+      "Tremor",
+      "Headache",
+      "Throat irritation"
+    ],
+    "prescription_required": true,
+    "what_it_does": "Budesonide (corticosteroid) reduces inflammation; formoterol (LABA) relaxes airways for 12+ hours.",
+    "contraindications": [
+      "Status asthmaticus",
+      "Hypersensitivity"
+    ],
+    "drug_interactions": [
+      "Strong CYP3A4 inhibitors (e.g., ketoconazole)",
+      "Beta-blockers (antagonize formoterol)"
+    ],
+    "dosage": "1–2 puffs twice daily. Rinse mouth after use.",
+    "storage": "Store below 30°C. Do not freeze. Keep actuator clean."
+  },
+  {
+    "id": 9,
+    "brand_name": "Udiliv",
+    "generic_name": "Ursodeoxycholic Acid",
+    "composition": [
+      { "ingredient": "Ursodeoxycholic Acid", "strength": "300", "unit": "mg" }
+    ],
+    "composition_hash": "ursodeoxycholic_acid_300mg",
+    "manufacturer": "Abbott India",
+    "price": 769,
+    "form": "Tablet",
+    "pack_size": 10,
+    "uses": [
+      "Liver and gallbladder disorders",
+      "Cholesterol gallstones dissolution"
+    ],
+    "side_effects": [
+      "Diarrhea",
+      "Nausea",
+      "Abdominal pain"
+    ],
+    "prescription_required": true,
+    "what_it_does": "Reduces cholesterol saturation in bile, promotes gallstone dissolution, and protects liver cells.",
+    "contraindications": [
+      "Calcified gallstones",
+      "Acute cholecystitis",
+      "Biliary obstruction"
+    ],
+    "drug_interactions": [
+      "Cholestyramine/colestipol (reduce absorption)",
+      "Aluminum antacids"
+    ],
+    "dosage": "8–10 mg/kg/day in 2–3 divided doses for gallstones; 13–15 mg/kg/day for liver disease.",
+    "storage": "Store below 30°C in dry place."
+  },
+  {
+    "id": 10,
+    "brand_name": "Betadine 10% Ointment",
+    "generic_name": "Povidone-Iodine",
+    "composition": [
+      { "ingredient": "Povidone-Iodine", "strength": "10", "unit": "%" }
+    ],
+    "composition_hash": "povidone-iodine_10%",
+    "manufacturer": "Win-Medicare Pvt Ltd",
+    "price": 135,
+    "form": "Ointment",
+    "pack_size": 25,
+    "uses": [
+      "Infection prevention in minor wounds",
+      "Cuts",
+      "Abrasions"
+    ],
+    "side_effects": [
+      "Skin irritation",
+      "Allergic reactions"
+    ],
+    "prescription_required": false,
+    "what_it_does": "Broad-spectrum antiseptic that releases free iodine to kill bacteria, viruses, fungi.",
+    "contraindications": [
+      "Iodine hypersensitivity",
+      "Thyroid disorders",
+      "Newborns"
+    ],
+    "drug_interactions": [
+      "Do not mix with silver or mercury compounds"
+    ],
+    "dosage": "Apply liberally to affected area 1–3 times daily.",
+    "storage": "Store below 30°C. Keep cap tightly closed."
+  },
+  {
+    "id": 11,
+    "brand_name": "Thyronorm",
+    "generic_name": "Thyroxine",
+    "composition": [
+      { "ingredient": "Thyroxine", "strength": "62.5", "unit": "mcg" }
+    ],
+    "composition_hash": "thyroxine_62.5mcg",
+    "manufacturer": "Abbott",
+    "price": 50,
+    "form": "Tablet",
+    "pack_size": 100,
+    "uses": [
+      "Thyroid hormone replacement"
+    ],
+    "side_effects": [
+      "Palpitations",
+      "Weight loss",
+      "Nervousness"
+    ],
+    "prescription_required": true,
+    "what_it_does": "Synthetic T4 hormone that replaces deficient thyroid hormone in hypothyroidism.",
+    "contraindications": [
+      "Untreated adrenal insufficiency",
+      "Uncorrected thyrotoxicosis"
+    ],
+    "drug_interactions": [
+      "Warfarin (increased effect)",
+      "Iron/calcium (reduce absorption)"
+    ],
+    "dosage": "25–200 mcg once daily on empty stomach. Adjust per TSH.",
+    "storage": "Store below 30°C in dry place."
+  },
+  {
+    "id": 12,
+    "brand_name": "Rosuvas 40",
+    "generic_name": "Rosuvastatin",
+    "composition": [
+      { "ingredient": "Rosuvastatin", "strength": "40", "unit": "mg" }
+    ],
+    "composition_hash": "rosuvastatin_40mg",
+    "manufacturer": "Sun Pharmaceutical Industries Ltd",
+    "price": 150,
+    "form": "Tablet",
+    "pack_size": 10,
+    "uses": [
+      "Cholesterol lowering",
+      "Heart attack and stroke risk reduction"
+    ],
+    "side_effects": [
+      "Muscle pain",
+      "Liver issues",
+      "Headache"
+    ],
+    "prescription_required": true,
+    "what_it_does": "HMG-CoA reductase inhibitor that lowers LDL and triglycerides.",
+    "contraindications": [
+      "Active liver disease",
+      "Pregnancy",
+      "Breastfeeding"
+    ],
+    "drug_interactions": [
+      "Cyclosporine (increased rosuvastatin levels)",
+      "Gemfibrozil"
+    ],
+    "dosage": "5–40 mg once daily. Max 40 mg.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 13,
+    "brand_name": "Zerodol-SP",
+    "generic_name": "Aceclofenac + Paracetamol + Serratiopeptidase",
+    "composition": [
+      { "ingredient": "Aceclofenac", "strength": "100", "unit": "mg" },
+      { "ingredient": "Paracetamol", "strength": "325", "unit": "mg" },
+      { "ingredient": "Serratiopeptidase", "strength": "15", "unit": "mg" }
+    ],
+    "composition_hash": "aceclofenac_100mg+paracetamol_325mg+serratiopeptidase_15mg",
+    "manufacturer": "Ipca Laboratories Ltd",
+    "price": 80,
+    "form": "Tablet",
+    "pack_size": 10,
+    "uses": [
+      "Pain and inflammation relief",
+      "Muscle pain",
+      "Joint pain",
+      "Postoperative pain"
+    ],
+    "side_effects": [
+      "Nausea",
+      "Dizziness",
+      "Stomach upset"
+    ],
+    "prescription_required": false,
+    "what_it_does": "Aceclofenac (NSAID) reduces pain/inflammation; paracetamol lowers fever/pain; serratiopeptidase reduces swelling.",
+    "contraindications": [
+      "Peptic ulcer",
+      "Severe renal/hepatic impairment"
+    ],
+    "drug_interactions": [
+      "Aspirin (increased GI risk)",
+      "Warfarin"
+    ],
+    "dosage": "1 tablet twice daily after meals.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 14,
+    "brand_name": "Dolo 650",
+    "generic_name": "Paracetamol",
+    "composition": [
+      { "ingredient": "Paracetamol", "strength": "650", "unit": "mg" }
+    ],
+    "composition_hash": "paracetamol_650mg",
+    "manufacturer": "Micro Labs Ltd",
+    "price": 35,
+    "form": "Tablet",
+    "pack_size": 20,
+    "uses": [
+      "Pain relief",
+      "Fever reduction"
+    ],
+    "side_effects": [
+      "Liver damage in overdose",
+      "Nausea"
+    ],
+    "prescription_required": false,
+    "what_it_does": "Inhibits prostaglandin synthesis in CNS to reduce pain and fever.",
+    "contraindications": [
+      "Severe liver disease",
+      "Alcoholism"
+    ],
+    "drug_interactions": [
+      "Warfarin (prolonged use)",
+      "Alcohol"
+    ],
+    "dosage": "1 tablet up to 4 times daily. Max 4g/day.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 15,
+    "brand_name": "Pan-D",
+    "generic_name": "Domperidone + Pantoprazole",
+    "composition": [
+      { "ingredient": "Domperidone", "strength": "30", "unit": "mg" },
+      { "ingredient": "Pantoprazole", "strength": "40", "unit": "mg" }
+    ],
+    "composition_hash": "domperidone_30mg+pantoprazole_40mg",
+    "manufacturer": "Abbott India",
+    "price": 120,
+    "form": "Capsule",
+    "pack_size": 15,
+    "uses": [
+      "Acid-related diseases",
+      "Nausea",
+      "Vomiting control"
+    ],
+    "side_effects": [
+      "Headache",
+      "Diarrhea",
+      "Dry mouth"
+    ],
+    "prescription_required": true,
+    "what_it_does": "Pantoprazole (PPI) reduces gastric acid; domperidone enhances gastric motility.",
+    "contraindications": [
+      "GI hemorrhage",
+      "Prolactinoma"
+    ],
+    "drug_interactions": [
+      "Ketoconazole (increased domperidone)",
+      "Erythromycin"
+    ],
+    "dosage": "1 capsule once daily before breakfast.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 16,
+    "brand_name": "Aciloc 300",
+    "generic_name": "Ranitidine",
+    "composition": [
+      { "ingredient": "Ranitidine", "strength": "300", "unit": "mg" }
+    ],
+    "composition_hash": "ranitidine_300mg",
+    "manufacturer": "Cadila Pharmaceuticals Ltd",
+    "price": 40,
+    "form": "Tablet",
+    "pack_size": 20,
+    "uses": [
+      "Heartburn",
+      "Indigestion",
+      "Stomach ulcers"
+    ],
+    "side_effects": [
+      "Headache",
+      "Dizziness",
+      "Constipation"
+    ],
+    "prescription_required": false,
+    "what_it_does": "H2 receptor blocker that reduces gastric acid secretion.",
+    "contraindications": [
+      "Porphyria",
+      "Hypersensitivity"
+    ],
+    "drug_interactions": [
+      "Warfarin",
+      "Ketoconazole"
+    ],
+    "dosage": "150–300 mg twice daily or 300 mg at bedtime.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 17,
+    "brand_name": "Zincovit",
+    "generic_name": "Multivitamin + Multimineral + Grape Seed Extract",
+    "composition": [
+      { "ingredient": "Multivitamin", "strength": "", "unit": "" },
+      { "ingredient": "Multimineral", "strength": "", "unit": "" },
+      { "ingredient": "Grape Seed Extract", "strength": "", "unit": "" }
+    ],
+    "composition_hash": "grape_seed_extract+multimineral+multivitamin",
+    "manufacturer": "Apex Laboratories Pvt Ltd",
+    "price": 100,
+    "form": "Tablet",
+    "pack_size": 15,
+    "uses": [
+      "Immune support",
+      "Antioxidant",
+      "Red blood cell formation"
+    ],
+    "side_effects": [
+      "Stomach upset",
+      "Allergic reactions"
+    ],
+    "prescription_required": false,
+    "what_it_does": "Provides essential vitamins and minerals to support immunity, energy, and antioxidant defense.",
+    "contraindications": [
+      "Hypervitaminosis",
+      "Allergy to components"
+    ],
+    "drug_interactions": [
+      "Minimal"
+    ],
+    "dosage": "1 tablet daily after meals.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 18,
+    "brand_name": "Clavam-XR",
+    "generic_name": "Amoxycillin + Clavulanic Acid",
+    "composition": [
+      { "ingredient": "Amoxycillin", "strength": "1000", "unit": "mg" },
+      { "ingredient": "Clavulanic Acid", "strength": "62.5", "unit": "mg" }
+    ],
+    "composition_hash": "amoxycillin_1000mg+clavulanic_acid_62.5mg",
+    "manufacturer": "Alkem Laboratories Ltd",
+    "price": 500,
+    "form": "Tablet",
+    "pack_size": 6,
+    "uses": [
+      "Bacterial infections of lungs",
+      "Ear",
+      "Nasal sinus",
+      "Urinary tract",
+      "Skin"
+    ],
+    "side_effects": [
+      "Nausea",
+      "Diarrhea",
+      "Vomiting"
+    ],
+    "prescription_required": true,
+    "what_it_does": "Extended-release amoxicillin with beta-lactamase inhibitor for resistant infections.",
+    "contraindications": [
+      "Penicillin allergy",
+      "Hepatic dysfunction history"
+    ],
+    "drug_interactions": [
+      "Probenecid",
+      "Allopurinol (rash)"
+    ],
+    "dosage": "1 tablet twice daily.",
+    "storage": "Store below 25°C."
+  },
+  {
+    "id": 19,
+    "brand_name": "Forxiga",
+    "generic_name": "Dapagliflozin",
+    "composition": [
+      { "ingredient": "Dapagliflozin", "strength": "10", "unit": "mg" }
+    ],
+    "composition_hash": "dapagliflozin_10mg",
+    "manufacturer": "AstraZeneca",
+    "price": 550,
+    "form": "Tablet",
+    "pack_size": 10,
+    "uses": [
+      "Type 2 diabetes management",
+      "Heart failure",
+      "Chronic kidney disease"
+    ],
+    "side_effects": [
+      "Urinary tract infections",
+      "Dehydration",
+      "Hypoglycemia"
+    ],
+    "prescription_required": true,
+    "what_it_does": "SGLT2 inhibitor that promotes glucose excretion in urine.",
+    "contraindications": [
+      "Type 1 diabetes",
+      "eGFR <30 mL/min",
+      "Ketoacidosis"
+    ],
+    "drug_interactions": [
+      "Insulin (hypoglycemia risk)",
+      "Diuretics"
+    ],
+    "dosage": "5–10 mg once daily.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 20,
+    "brand_name": "Telma H",
+    "generic_name": "Telmisartan + Hydrochlorothiazide",
+    "composition": [
+      { "ingredient": "Telmisartan", "strength": "40", "unit": "mg" },
+      { "ingredient": "Hydrochlorothiazide", "strength": "12.5", "unit": "mg" }
+    ],
+    "composition_hash": "hydrochlorothiazide_12.5mg+telmisartan_40mg",
+    "manufacturer": "Glenmark Pharmaceuticals",
+    "price": 150,
+    "form": "Tablet",
+    "pack_size": 10,
+    "uses": [
+      "Hypertension control"
+    ],
+    "side_effects": [
+      "Dizziness",
+      "Fatigue",
+      "Hyperglycemia"
+    ],
+    "prescription_required": true,
+    "what_it_does": "Telmisartan (ARB) blocks angiotensin II; HCTZ increases urine output.",
+    "contraindications": [
+      "Anuria",
+      "Pregnancy (2nd/3rd trimester)"
+    ],
+    "drug_interactions": [
+      "Lithium",
+      "NSAIDs"
+    ],
+    "dosage": "1 tablet once daily.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 21,
+    "brand_name": "Azithral 500",
+    "generic_name": "Azithromycin",
+    "composition": [
+      { "ingredient": "Azithromycin", "strength": "500", "unit": "mg" }
+    ],
+    "composition_hash": "azithromycin_500mg",
+    "manufacturer": "Alembic Pharmaceuticals",
+    "price": 80,
+    "form": "Tablet",
+    "pack_size": 3,
+    "uses": [
+      "Bacterial infections",
+      "Respiratory tract infections",
+      "Skin infections"
+    ],
+    "side_effects": [
+      "Nausea",
+      "Diarrhea",
+      "Abdominal pain"
+    ],
+    "prescription_required": true,
+    "what_it_does": "Macrolide antibiotic that inhibits bacterial protein synthesis.",
+    "contraindications": [
+      "Hypersensitivity",
+      "Severe liver disease"
+    ],
+    "drug_interactions": [
+      "Warfarin",
+      "Statins"
+    ],
+    "dosage": "500 mg once daily for 3 days.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 22,
+    "brand_name": "Combiflam",
+    "generic_name": "Ibuprofen + Paracetamol",
+    "composition": [
+      { "ingredient": "Ibuprofen", "strength": "400", "unit": "mg" },
+      { "ingredient": "Paracetamol", "strength": "325", "unit": "mg" }
+    ],
+    "composition_hash": "ibuprofen_400mg+paracetamol_325mg",
+    "manufacturer": "Sanofi India",
+    "price": 40,
+    "form": "Tablet",
+    "pack_size": 20,
+    "uses": [
+      "Pain relief",
+      "Fever",
+      "Inflammation"
+    ],
+    "side_effects": [
+      "Stomach upset",
+      "Heartburn",
+      "Drowsiness"
+    ],
+    "prescription_required": false,
+    "what_it_does": "Ibuprofen (NSAID) reduces inflammation; paracetamol reduces pain/fever.",
+    "contraindications": [
+      "Peptic ulcer",
+      "Severe heart failure"
+    ],
+    "drug_interactions": [
+      "Aspirin",
+      "Warfarin"
+    ],
+    "dosage": "1 tablet 3–4 times daily after meals.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 23,
+    "brand_name": "Ecosprin 75",
+    "generic_name": "Aspirin",
+    "composition": [
+      { "ingredient": "Aspirin", "strength": "75", "unit": "mg" }
+    ],
+    "composition_hash": "aspirin_75mg",
+    "manufacturer": "USV Ltd",
+    "price": 20,
+    "form": "Tablet",
+    "pack_size": 14,
+    "uses": [
+      "Prevent heart attacks",
+      "Stroke prevention",
+      "Blood thinning"
+    ],
+    "side_effects": [
+      "Bleeding",
+      "Stomach ulcers",
+      "Allergic reactions"
+    ],
+    "prescription_required": true,
+    "what_it_does": "Irreversibly inhibits platelet COX-1, preventing clot formation.",
+    "contraindications": [
+      "Active bleeding",
+      "Aspirin allergy",
+      "Children with viral fever"
+    ],
+    "drug_interactions": [
+      "NSAIDs",
+      "Warfarin"
+    ],
+    "dosage": "75–150 mg once daily.",
+    "storage": "Store below 30°C in dry place."
+  },
+  {
+    "id": 24,
+    "brand_name": "Galvus",
+    "generic_name": "Vildagliptin",
+    "composition": [
+      { "ingredient": "Vildagliptin", "strength": "50", "unit": "mg" }
+    ],
+    "composition_hash": "vildagliptin_50mg",
+    "manufacturer": "Novartis",
+    "price": 300,
+    "form": "Tablet",
+    "pack_size": 10,
+    "uses": [
+      "Type 2 diabetes"
+    ],
+    "side_effects": [
+      "Headache",
+      "Dizziness",
+      "Tremor"
+    ],
+    "prescription_required": true,
+    "what_it_does": "DPP-4 inhibitor that enhances incretin effect to increase insulin and decrease glucagon.",
+    "contraindications": [
+      "Type 1 diabetes",
+      "Ketoacidosis"
+    ],
+    "drug_interactions": [
+      "ACE inhibitors (angioedema risk)"
+    ],
+    "dosage": "50 mg twice daily with or without meals.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 25,
+    "brand_name": "Pantocid",
+    "generic_name": "Pantoprazole",
+    "composition": [
+      { "ingredient": "Pantoprazole", "strength": "40", "unit": "mg" }
+    ],
+    "composition_hash": "pantoprazole_40mg",
+    "manufacturer": "Sun Pharma",
+    "price": 60,
+    "form": "Tablet",
+    "pack_size": 15,
+    "uses": [
+      "Acid reflux",
+      "Ulcers",
+      "GERD"
+    ],
+    "side_effects": [
+      "Headache",
+      "Diarrhea",
+      "Nausea"
+    ],
+    "prescription_required": true,
+    "what_it_does": "Proton pump inhibitor that irreversibly blocks H+/K+ ATPase in parietal cells.",
+    "contraindications": [
+      "Hypersensitivity"
+    ],
+    "drug_interactions": [
+      "Warfarin",
+      "Methotrexate"
+    ],
+    "dosage": "40 mg once daily before breakfast.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 26,
+    "brand_name": "Cilacar",
+    "generic_name": "Cilnidipine",
+    "composition": [
+      { "ingredient": "Cilnidipine", "strength": "10", "unit": "mg" }
+    ],
+    "composition_hash": "cilnidipine_10mg",
+    "manufacturer": "J B Chemicals",
+    "price": 100,
+    "form": "Tablet",
+    "pack_size": 10,
+    "uses": [
+      "Hypertension"
+    ],
+    "side_effects": [
+      "Headache",
+      "Dizziness",
+      "Edema"
+    ],
+    "prescription_required": true,
+    "what_it_does": "Dual L/N-type calcium channel blocker with vasodilatory and sympatholytic effects.",
+    "contraindications": [
+      "Cardiogenic shock",
+      "Severe aortic stenosis"
+    ],
+    "drug_interactions": [
+      "CYP3A4 inhibitors"
+    ],
+    "dosage": "5–20 mg once daily.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 27,
+    "brand_name": "Lupisulin M30",
+    "generic_name": "Insulin Isophane + Insulin Regular",
+    "composition": [
+      { "ingredient": "Insulin Isophane", "strength": "70", "unit": "%" },
+      { "ingredient": "Insulin Regular", "strength": "30", "unit": "%" }
+    ],
+    "composition_hash": "insulin_isophane_70%+insulin_regular_30%",
+    "manufacturer": "Lupin Ltd",
+    "price": 200,
+    "form": "Injection",
+    "pack_size": 1,
+    "uses": [
+      "Diabetes management"
+    ],
+    "side_effects": [
+      "Hypoglycemia",
+      "Weight gain"
+    ],
+    "prescription_required": true,
+    "what_it_does": "Biphasic insulin: 70% intermediate, 30% rapid-acting.",
+    "contraindications": [
+      "Hypoglycemia"
+    ],
+    "drug_interactions": [
+      "Beta-blockers",
+      "Alcohol"
+    ],
+    "dosage": "Individualized, usually 1–2 times daily.",
+    "storage": "Unopened: 2–8°C. In-use: <30°C for 4 weeks."
+  },
+  {
+    "id": 28,
+    "brand_name": "Taxim-O",
+    "generic_name": "Cefixime",
+    "composition": [
+      { "ingredient": "Cefixime", "strength": "200", "unit": "mg" }
+    ],
+    "composition_hash": "cefixime_200mg",
+    "manufacturer": "Alkem Laboratories",
+    "price": 90,
+    "form": "Tablet",
+    "pack_size": 10,
+    "uses": [
+      "Bacterial infections"
+    ],
+    "side_effects": [
+      "Diarrhea",
+      "Nausea",
+      "Rash"
+    ],
+    "prescription_required": true,
+    "what_it_does": "3rd-generation cephalosporin that inhibits bacterial cell wall synthesis.",
+    "contraindications": [
+      "Cephalosporin allergy"
+    ],
+    "drug_interactions": [
+      "Probenecid"
+    ],
+    "dosage": "200–400 mg once or twice daily.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 29,
+    "brand_name": "Omez",
+    "generic_name": "Omeprazole",
+    "composition": [
+      { "ingredient": "Omeprazole", "strength": "20", "unit": "mg" }
+    ],
+    "composition_hash": "omeprazole_20mg",
+    "manufacturer": "Dr. Reddy's Laboratories",
+    "price": 50,
+    "form": "Capsule",
+    "pack_size": 15,
+    "uses": [
+      "Acid reduction",
+      "Ulcers"
+    ],
+    "side_effects": [
+      "Headache",
+      "Abdominal pain"
+    ],
+    "prescription_required": false,
+    "what_it_does": "PPI that suppresses gastric acid secretion.",
+    "contraindications": [
+      "Hypersensitivity"
+    ],
+    "drug_interactions": [
+      "Clopidogrel",
+      "Warfarin"
+    ],
+    "dosage": "20–40 mg once daily before meals.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 30,
+    "brand_name": "Atorva 20",
+    "generic_name": "Atorvastatin",
+    "composition": [
+      { "ingredient": "Atorvastatin", "strength": "20", "unit": "mg" }
+    ],
+    "composition_hash": "atorvastatin_20mg",
+    "manufacturer": "Zydus Cadila",
+    "price": 80,
+    "form": "Tablet",
+    "pack_size": 10,
+    "uses": [
+      "Cholesterol control"
+    ],
+    "side_effects": [
+      "Muscle pain",
+      "Liver enzyme elevation"
+    ],
+    "prescription_required": true,
+    "what_it_does": "Statin that lowers LDL by inhibiting HMG-CoA reductase.",
+    "contraindications": [
+      "Active liver disease",
+      "Pregnancy"
+    ],
+    "drug_interactions": [
+      "Cyclosporine",
+      "Fibrates"
+    ],
+    "dosage": "10–80 mg once daily.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 31,
+    "brand_name": "Deriphyl",
+    "generic_name": "Doxylamine + Pyridoxine",
+    "composition": [
+      { "ingredient": "Doxylamine", "strength": "20", "unit": "mg" },
+      { "ingredient": "Pyridoxine", "strength": "20", "unit": "mg" }
+    ],
+    "composition_hash": "doxylamine_20mg+pyridoxine_20mg",
+    "manufacturer": "USV Ltd",
+    "price": 100,
+    "form": "Tablet",
+    "pack_size": 10,
+    "uses": [
+      "Nausea and vomiting in pregnancy"
+    ],
+    "side_effects": [
+      "Drowsiness",
+      "Dry mouth"
+    ],
+    "prescription_required": false,
+    "what_it_does": "Antihistamine + vitamin B6 combination for pregnancy-related nausea.",
+    "contraindications": [
+      "Glaucoma",
+      "Pyloroduodenal obstruction"
+    ],
+    "drug_interactions": [
+      "CNS depressants"
+    ],
+    "dosage": "1 tablet at bedtime; may increase to 4/day.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 32,
+    "brand_name": "Cipralex",
+    "generic_name": "Escitalopram",
+    "composition": [
+      { "ingredient": "Escitalopram", "strength": "10", "unit": "mg" }
+    ],
+    "composition_hash": "escitalopram_10mg",
+    "manufacturer": "Lundbeck",
+    "price": 150,
+    "form": "Tablet",
+    "pack_size": 10,
+    "uses": [
+      "Depression",
+      "Anxiety"
+    ],
+    "side_effects": [
+      "Nausea",
+      "Insomnia",
+      "Sexual dysfunction"
+    ],
+    "prescription_required": true,
+    "what_it_does": "SSRI that increases serotonin in synaptic cleft.",
+    "contraindications": [
+      "MAO inhibitors",
+      "Pimozide"
+    ],
+    "drug_interactions": [
+      "MAOIs",
+      "Linezolid"
+    ],
+    "dosage": "10–20 mg once daily.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 33,
+    "brand_name": "Sporidex",
+    "generic_name": "Cephalexin",
+    "composition": [
+      { "ingredient": "Cephalexin", "strength": "500", "unit": "mg" }
+    ],
+    "composition_hash": "cephalexin_500mg",
+    "manufacturer": "Ranbaxy Laboratories",
+    "price": 70,
+    "form": "Capsule",
+    "pack_size": 10,
+    "uses": [
+      "Bacterial infections"
+    ],
+    "side_effects": [
+      "Diarrhea",
+      "Rash"
+    ],
+    "prescription_required": true,
+    "what_it_does": "1st-generation cephalosporin.",
+    "contraindications": [
+      "Cephalosporin allergy"
+    ],
+    "drug_interactions": [
+      "Probenecid"
+    ],
+    "dosage": "250–500 mg every 6 hours.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 34,
+    "brand_name": "Telmikind",
+    "generic_name": "Telmisartan",
+    "composition": [
+      { "ingredient": "Telmisartan", "strength": "40", "unit": "mg" }
+    ],
+    "composition_hash": "telmisartan_40mg",
+    "manufacturer": "Mankind Pharma",
+    "price": 90,
+    "form": "Tablet",
+    "pack_size": 10,
+    "uses": [
+      "Hypertension"
+    ],
+    "side_effects": [
+      "Dizziness",
+      "Back pain"
+    ],
+    "prescription_required": true,
+    "what_it_does": "ARB that blocks AT1 receptors.",
+    "contraindications": [
+      "Pregnancy",
+      "Biliary obstruction"
+    ],
+    "drug_interactions": [
+      "Aliskiren"
+    ],
+    "dosage": "40–80 mg once daily.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 35,
+    "brand_name": "Metpure",
+    "generic_name": "Metformin",
+    "composition": [
+      { "ingredient": "Metformin", "strength": "500", "unit": "mg" }
+    ],
+    "composition_hash": "metformin_500mg",
+    "manufacturer": "Intas Pharmaceuticals",
+    "price": 20,
+    "form": "Tablet",
+    "pack_size": 10,
+    "uses": [
+      "Type 2 diabetes"
+    ],
+    "side_effects": [
+      "Nausea",
+      "Diarrhea"
+    ],
+    "prescription_required": true,
+    "what_it_does": "Decreases hepatic glucose production and improves insulin sensitivity.",
+    "contraindications": [
+      "eGFR <30",
+      "Acute heart failure"
+    ],
+    "drug_interactions": [
+      "Cationic drugs"
+    ],
+    "dosage": "500–2000 mg/day in divided doses.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 36,
+    "brand_name": "Nurofen",
+    "generic_name": "Ibuprofen",
+    "composition": [
+      { "ingredient": "Ibuprofen", "strength": "400", "unit": "mg" }
+    ],
+    "composition_hash": "ibuprofen_400mg",
+    "manufacturer": "Reckitt Benckiser",
+    "price": 50,
+    "form": "Tablet",
+    "pack_size": 20,
+    "uses": [
+      "Pain",
+      "Inflammation",
+      "Fever"
+    ],
+    "side_effects": [
+      "Stomach pain",
+      "Ulcers"
+    ],
+    "prescription_required": false,
+    "what_it_does": "NSAID that inhibits COX-1 and COX-2.",
+    "contraindications": [
+      "Active ulcer",
+      "3rd trimester pregnancy"
+    ],
+    "drug_interactions": [
+      "Aspirin",
+      "Warfarin"
+    ],
+    "dosage": "400 mg every 6–8 hours.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 37,
+    "brand_name": "Amlong",
+    "generic_name": "Amlodipine",
+    "composition": [
+      { "ingredient": "Amlodipine", "strength": "5", "unit": "mg" }
+    ],
+    "composition_hash": "amlodipine_5mg",
+    "manufacturer": "Micro Labs",
+    "price": 40,
+    "form": "Tablet",
+    "pack_size": 10,
+    "uses": [
+      "Hypertension",
+      "Angina"
+    ],
+    "side_effects": [
+      "Swelling",
+      "Dizziness"
+    ],
+    "prescription_required": true,
+    "what_it_does": "Dihydropyridine CCB that relaxes vascular smooth muscle.",
+    "contraindications": [
+      "Severe hypotension"
+    ],
+    "drug_interactions": [
+      "Simvastatin"
+    ],
+    "dosage": "5–10 mg once daily.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 38,
+    "brand_name": "Becosules",
+    "generic_name": "Vitamin B Complex",
+    "composition": [
+      { "ingredient": "Vitamin B Complex", "strength": "", "unit": "" }
+    ],
+    "composition_hash": "vitamin_b_complex",
+    "manufacturer": "Pfizer",
+    "price": 30,
+    "form": "Capsule",
+    "pack_size": 20,
+    "uses": [
+      "Vitamin deficiency",
+      "Energy boost"
+    ],
+    "side_effects": [
+      "Rare allergic reactions"
+    ],
+    "prescription_required": false,
+    "what_it_does": "Replenishes B vitamins essential for metabolism and nerve function.",
+    "contraindications": [
+      "Hypersensitivity"
+    ],
+    "drug_interactions": [
+      "Minimal"
+    ],
+    "dosage": "1 capsule daily.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 39,
+    "brand_name": "Cetzine",
+    "generic_name": "Cetirizine",
+    "composition": [
+      { "ingredient": "Cetirizine", "strength": "10", "unit": "mg" }
+    ],
+    "composition_hash": "cetirizine_10mg",
+    "manufacturer": "GSK",
+    "price": 25,
+    "form": "Tablet",
+    "pack_size": 10,
+    "uses": [
+      "Allergies",
+      "Hay fever",
+      "Itching"
+    ],
+    "side_effects": [
+      "Drowsiness",
+      "Dry mouth"
+    ],
+    "prescription_required": false,
+    "what_it_does": "2nd-gen H1 antihistamine with minimal sedation.",
+    "contraindications": [
+      "Severe renal impairment"
+    ],
+    "drug_interactions": [
+      "CNS depressants"
+    ],
+    "dosage": "10 mg once daily.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 40,
+    "brand_name": "Digene",
+    "generic_name": "Antacid",
+    "composition": [
+      { "ingredient": "Magnesium Hydroxide", "strength": "200", "unit": "mg" },
+      { "ingredient": "Aluminium Hydroxide", "strength": "200", "unit": "mg" }
+    ],
+    "composition_hash": "aluminium_hydroxide_200mg+magnesium_hydroxide_200mg",
+    "manufacturer": "Abbott",
+    "price": 50,
+    "form": "Tablet",
+    "pack_size": 15,
+    "uses": [
+      "Heartburn",
+      "Indigestion"
+    ],
+    "side_effects": [
+      "Constipation",
+      "Diarrhea"
+    ],
+    "prescription_required": false,
+    "what_it_does": "Neutralizes gastric acid.",
+    "contraindications": [
+      "Renal failure"
+    ],
+    "drug_interactions": [
+      "Tetracyclines"
+    ],
+    "dosage": "1–2 tablets after meals.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 41,
+    "brand_name": "Enzomac",
+    "generic_name": "Trypsin + Chymotrypsin",
+    "composition": [
+      { "ingredient": "Trypsin", "strength": "48", "unit": "mg" },
+      { "ingredient": "Chymotrypsin", "strength": "2", "unit": "mg" }
+    ],
+    "composition_hash": "chymotrypsin_2mg+trypsin_48mg",
+    "manufacturer": "Macleods Pharmaceuticals",
+    "price": 60,
+    "form": "Tablet",
+    "pack_size": 20,
+    "uses": [
+      "Inflammation reduction",
+      "Post-surgery"
+    ],
+    "side_effects": [
+      "Nausea",
+      "Allergic reactions"
+    ],
+    "prescription_required": false,
+    "what_it_does": "Proteolytic enzymes that reduce swelling and promote healing.",
+    "contraindications": [
+      "Bleeding disorders"
+    ],
+    "drug_interactions": [
+      "Anticoagulants"
+    ],
+    "dosage": "1 tablet 2–3 times daily.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 42,
+    "brand_name": "Folvite",
+    "generic_name": "Folic Acid",
+    "composition": [
+      { "ingredient": "Folic Acid", "strength": "5", "unit": "mg" }
+    ],
+    "composition_hash": "folic_acid_5mg",
+    "manufacturer": "Pfizer",
+    "price": 15,
+    "form": "Tablet",
+    "pack_size": 15,
+    "uses": [
+      "Folate deficiency",
+      "Anemia prevention"
+    ],
+    "side_effects": [
+      "Minimal"
+    ],
+    "prescription_required": false,
+    "what_it_does": "Essential for DNA synthesis and red blood cell formation.",
+    "contraindications": [
+      "Vitamin B12 deficiency (masking)"
+    ],
+    "drug_interactions": [
+      "Methotrexate"
+    ],
+    "dosage": "1 tablet daily.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 43,
+    "brand_name": "Gemcal",
+    "generic_name": "Calcitriol + Calcium Carbonate",
+    "composition": [
+      { "ingredient": "Calcitriol", "strength": "0.25", "unit": "mcg" },
+      { "ingredient": "Calcium Carbonate", "strength": "500", "unit": "mg" }
+    ],
+    "composition_hash": "calcitriol_0.25mcg+calcium_carbonate_500mg",
+    "manufacturer": "Galderma",
+    "price": 80,
+    "form": "Capsule",
+    "pack_size": 15,
+    "uses": [
+      "Osteoporosis",
+      "Calcium deficiency"
+    ],
+    "side_effects": [
+      "Hypercalcemia",
+      "Nausea"
+    ],
+    "prescription_required": true,
+    "what_it_does": "Calcitriol enhances calcium absorption; calcium carbonate provides elemental calcium.",
+    "contraindications": [
+      "Hypercalcemia",
+      "Renal stones"
+    ],
+    "drug_interactions": [
+      "Thiazides"
+    ],
+    "dosage": "1 capsule daily.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 44,
+    "brand_name": "Hifenac-P",
+    "generic_name": "Aceclofenac + Paracetamol",
+    "composition": [
+      { "ingredient": "Aceclofenac", "strength": "100", "unit": "mg" },
+      { "ingredient": "Paracetamol", "strength": "325", "unit": "mg" }
+    ],
+    "composition_hash": "aceclofenac_100mg+paracetamol_325mg",
+    "manufacturer": "Intas",
+    "price": 50,
+    "form": "Tablet",
+    "pack_size": 10,
+    "uses": [
+      "Pain relief",
+      "Inflammation"
+    ],
+    "side_effects": [
+      "Stomach upset",
+      "Dizziness"
+    ],
+    "prescription_required": false,
+    "what_it_does": "NSAID + analgesic combination.",
+    "contraindications": [
+      "Peptic ulcer"
+    ],
+    "drug_interactions": [
+      "Warfarin"
+    ],
+    "dosage": "1 tablet twice daily after meals.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 45,
+    "brand_name": "Ketorol",
+    "generic_name": "Ketorolac",
+    "composition": [
+      { "ingredient": "Ketorolac", "strength": "10", "unit": "mg" }
+    ],
+    "composition_hash": "ketorolac_10mg",
+    "manufacturer": "Dr. Reddy's",
+    "price": 30,
+    "form": "Tablet",
+    "pack_size": 10,
+    "uses": [
+      "Short-term pain relief"
+    ],
+    "side_effects": [
+      "Bleeding risk",
+      "Stomach pain"
+    ],
+    "prescription_required": true,
+    "what_it_does": "Potent NSAID for acute pain.",
+    "contraindications": [
+      "Active ulcer",
+      "Renal failure"
+    ],
+    "drug_interactions": [
+      "Aspirin"
+    ],
+    "dosage": "10 mg every 4–6 hours. Max 5 days.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 46,
+    "brand_name": "Lyrica",
+    "generic_name": "Pregabalin",
+    "composition": [
+      { "ingredient": "Pregabalin", "strength": "75", "unit": "mg" }
+    ],
+    "composition_hash": "pregabalin_75mg",
+    "manufacturer": "Pfizer",
+    "price": 200,
+    "form": "Capsule",
+    "pack_size": 14,
+    "uses": [
+      "Neuropathic pain",
+      "Epilepsy"
+    ],
+    "side_effects": [
+      "Dizziness",
+      "Weight gain"
+    ],
+    "prescription_required": true,
+    "what_it_does": "Binds to alpha-2-delta subunit of voltage-gated calcium channels.",
+    "contraindications": [
+      "Hypersensitivity"
+    ],
+    "drug_interactions": [
+      "CNS depressants"
+    ],
+    "dosage": "150–600 mg/day in 2–3 divided doses.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 47,
+    "brand_name": "Montair LC",
+    "generic_name": "Levocetirizine + Montelukast",
+    "composition": [
+      { "ingredient": "Levocetirizine", "strength": "5", "unit": "mg" },
+      { "ingredient": "Montelukast", "strength": "10", "unit": "mg" }
+    ],
+    "composition_hash": "levocetirizine_5mg+montelukast_10mg",
+    "manufacturer": "Cipla",
+    "price": 120,
+    "form": "Tablet",
+    "pack_size": 15,
+    "uses": [
+      "Allergic rhinitis",
+      "Asthma"
+    ],
+    "side_effects": [
+      "Drowsiness",
+      "Headache"
+    ],
+    "prescription_required": false,
+    "what_it_does": "Levocetirizine (antihistamine) + montelukast (leukotriene antagonist).",
+    "contraindications": [
+      "Severe renal impairment"
+    ],
+    "drug_interactions": [
+      "CNS depressants"
+    ],
+    "dosage": "1 tablet at night.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 48,
+    "brand_name": "Nexium",
+    "generic_name": "Esomeprazole",
+    "composition": [
+      { "ingredient": "Esomeprazole", "strength": "40", "unit": "mg" }
+    ],
+    "composition_hash": "esomeprazole_40mg",
+    "manufacturer": "AstraZeneca",
+    "price": 150,
+    "form": "Tablet",
+    "pack_size": 10,
+    "uses": [
+      "GERD",
+      "Ulcers"
+    ],
+    "side_effects": [
+      "Nausea",
+      "Flatulence"
+    ],
+    "prescription_required": true,
+    "what_it_does": "PPI (S-isomer of omeprazole).",
+    "contraindications": [
+      "Hypersensitivity"
+    ],
+    "drug_interactions": [
+      "Clopidogrel"
+    ],
+    "dosage": "20–40 mg once daily.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 49,
+    "brand_name": "Oxetol",
+    "generic_name": "Oxcarbazepine",
+    "composition": [
+      { "ingredient": "Oxcarbazepine", "strength": "300", "unit": "mg" }
+    ],
+    "composition_hash": "oxcarbazepine_300mg",
+    "manufacturer": "Cipla",
+    "price": 100,
+    "form": "Tablet",
+    "pack_size": 10,
+    "uses": [
+      "Epilepsy",
+      "Bipolar disorder"
+    ],
+    "side_effects": [
+      "Dizziness",
+      "Nausea"
+    ],
+    "prescription_required": true,
+    "what_it_does": "Blocks voltage-sensitive sodium channels.",
+    "contraindications": [
+      "Hypersensitivity"
+    ],
+    "drug_interactions": [
+      "Oral contraceptives"
+    ],
+    "dosage": "300–2400 mg/day in 2 doses.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 50,
+    "brand_name": "Qvar",
+    "generic_name": "Beclomethasone",
+    "composition": [
+      { "ingredient": "Beclomethasone", "strength": "200", "unit": "mcg" }
+    ],
+    "composition_hash": "beclomethasone_200mcg",
+    "manufacturer": "3M",
+    "price": 300,
+    "form": "Inhaler",
+    "pack_size": 1,
+    "uses": [
+      "Asthma"
+    ],
+    "side_effects": [
+      "Hoarseness",
+      "Oral thrush"
+    ],
+    "prescription_required": true,
+    "what_it_does": "Inhaled corticosteroid.",
+    "contraindications": [
+      "Status asthmaticus"
+    ],
+    "drug_interactions": [
+      "CYP3A4 inhibitors"
+    ],
+    "dosage": "100–400 mcg twice daily.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 51,
+    "brand_name": "Rantac",
+    "generic_name": "Ranitidine",
+    "composition": [
+      { "ingredient": "Ranitidine", "strength": "150", "unit": "mg" }
+    ],
+    "composition_hash": "ranitidine_150mg",
+    "manufacturer": "J B Chemicals",
+    "price": 25,
+    "form": "Tablet",
+    "pack_size": 15,
+    "uses": [
+      "Acid peptic disease"
+    ],
+    "side_effects": [
+      "Headache"
+    ],
+    "prescription_required": false,
+    "what_it_does": "H2 blocker.",
+    "contraindications": [
+      "Porphyria"
+    ],
+    "drug_interactions": [
+      "Ketoconazole"
+    ],
+    "dosage": "150 mg twice daily.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 52,
+    "brand_name": "Sizopin",
+    "generic_name": "Clozapine",
+    "composition": [
+      { "ingredient": "Clozapine", "strength": "100", "unit": "mg" }
+    ],
+    "composition_hash": "clozapine_100mg",
+    "manufacturer": "Sun Pharma",
+    "price": 50,
+    "form": "Tablet",
+    "pack_size": 10,
+    "uses": [
+      "Schizophrenia"
+    ],
+    "side_effects": [
+      "Agranulocytosis",
+      "Sedation"
+    ],
+    "prescription_required": true,
+    "what_it_does": "Atypical antipsychotic with D2 and 5-HT2A antagonism.",
+    "contraindications": [
+      "Myelosuppression",
+      "Uncontrolled epilepsy"
+    ],
+    "drug_interactions": [
+      "Carbamazepine"
+    ],
+    "dosage": "12.5–900 mg/day. Requires WBC monitoring.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 53,
+    "brand_name": "Tryptomer",
+    "generic_name": "Amitriptyline",
+    "composition": [
+      { "ingredient": "Amitriptyline", "strength": "10", "unit": "mg" }
+    ],
+    "composition_hash": "amitriptyline_10mg",
+    "manufacturer": "Merind",
+    "price": 20,
+    "form": "Tablet",
+    "pack_size": 30,
+    "uses": [
+      "Depression",
+      "Neuropathic pain"
+    ],
+    "side_effects": [
+      "Dry mouth",
+      "Constipation"
+    ],
+    "prescription_required": true,
+    "what_it_does": "TCA that inhibits serotonin and norepinephrine reuptake.",
+    "contraindications": [
+      "Recent MI",
+      "MAOIs"
+    ],
+    "drug_interactions": [
+      "MAOIs",
+      "SSRIs"
+    ],
+    "dosage": "25–150 mg/day.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 54,
+    "brand_name": "Uprise D3",
+    "generic_name": "Cholecalciferol",
+    "composition": [
+      { "ingredient": "Cholecalciferol", "strength": "60000", "unit": "IU" }
+    ],
+    "composition_hash": "cholecalciferol_60000iu",
+    "manufacturer": "Alkem",
+    "price": 100,
+    "form": "Sachet",
+    "pack_size": 4,
+    "uses": [
+      "Vitamin D deficiency"
+    ],
+    "side_effects": [
+      "Hypercalcemia in overdose"
+    ],
+    "prescription_required": false,
+    "what_it_does": "Vitamin D3 for calcium absorption and bone health.",
+    "contraindications": [
+      "Hypercalcemia"
+    ],
+    "drug_interactions": [
+      "Thiazides"
+    ],
+    "dosage": "1 sachet weekly for 8–12 weeks.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 55,
+    "brand_name": "Voveran",
+    "generic_name": "Diclofenac",
+    "composition": [
+      { "ingredient": "Diclofenac", "strength": "50", "unit": "mg" }
+    ],
+    "composition_hash": "diclofenac_50mg",
+    "manufacturer": "Novartis",
+    "price": 40,
+    "form": "Tablet",
+    "pack_size": 15,
+    "uses": [
+      "Pain",
+      "Inflammation"
+    ],
+    "side_effects": [
+      "Gastric irritation"
+    ],
+    "prescription_required": false,
+    "what_it_does": "NSAID.",
+    "contraindications": [
+      "Peptic ulcer"
+    ],
+    "drug_interactions": [
+      "Aspirin"
+    ],
+    "dosage": "50 mg 2–3 times daily.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 56,
+    "brand_name": "Wysolone",
+    "generic_name": "Prednisolone",
+    "composition": [
+      { "ingredient": "Prednisolone", "strength": "5", "unit": "mg" }
+    ],
+    "composition_hash": "prednisolone_5mg",
+    "manufacturer": "Pfizer",
+    "price": 30,
+    "form": "Tablet",
+    "pack_size": 20,
+    "uses": [
+      "Inflammation",
+      "Autoimmune disorders"
+    ],
+    "side_effects": [
+      "Weight gain",
+      "Osteoporosis"
+    ],
+    "prescription_required": true,
+    "what_it_does": "Synthetic glucocorticoid.",
+    "contraindications": [
+      "Systemic fungal infections"
+    ],
+    "drug_interactions": [
+      "NSAIDs"
+    ],
+    "dosage": "5–60 mg/day.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 57,
+    "brand_name": "Xeloda",
+    "generic_name": "Capecitabine",
+    "composition": [
+      { "ingredient": "Capecitabine", "strength": "500", "unit": "mg" }
+    ],
+    "composition_hash": "capecitabine_500mg",
+    "manufacturer": "Roche",
+    "price": 2000,
+    "form": "Tablet",
+    "pack_size": 120,
+    "uses": [
+      "Breast cancer",
+      "Colorectal cancer"
+    ],
+    "side_effects": [
+      "Hand-foot syndrome",
+      "Diarrhea"
+    ],
+    "prescription_required": true,
+    "what_it_does": "Oral prodrug of 5-FU.",
+    "contraindications": [
+      "DPD deficiency"
+    ],
+    "drug_interactions": [
+      "Warfarin"
+    ],
+    "dosage": "1250 mg/m² twice daily for 14 days, 7 days off.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 58,
+    "brand_name": "Yasmin",
+    "generic_name": "Drospirenone + Ethinylestradiol",
+    "composition": [
+      { "ingredient": "Drospirenone", "strength": "3", "unit": "mg" },
+      { "ingredient": "Ethinylestradiol", "strength": "0.03", "unit": "mg" }
+    ],
+    "composition_hash": "drospirenone_3mg+ethinylestradiol_0.03mg",
+    "manufacturer": "Bayer",
+    "price": 400,
+    "form": "Tablet",
+    "pack_size": 21,
+    "uses": [
+      "Contraception"
+    ],
+    "side_effects": [
+      "Nausea",
+      "Headache"
+    ],
+    "prescription_required": true,
+    "what_it_does": "Combined oral contraceptive.",
+    "contraindications": [
+      "Thrombosis",
+      "Smoking >35 years"
+    ],
+    "drug_interactions": [
+      "CYP3A4 inducers"
+    ],
+    "dosage": "1 tablet daily for 21 days.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 59,
+    "brand_name": "Zoloft",
+    "generic_name": "Sertraline",
+    "composition": [
+      { "ingredient": "Sertraline", "strength": "50", "unit": "mg" }
+    ],
+    "composition_hash": "sertraline_50mg",
+    "manufacturer": "Pfizer",
+    "price": 150,
+    "form": "Tablet",
+    "pack_size": 28,
+    "uses": [
+      "Depression",
+      "OCD"
+    ],
+    "side_effects": [
+      "Insomnia",
+      "Sexual dysfunction"
+    ],
+    "prescription_required": true,
+    "what_it_does": "SSRI.",
+    "contraindications": [
+      "MAOIs"
+    ],
+    "drug_interactions": [
+      "Pimozide"
+    ],
+    "dosage": "50–200 mg once daily.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 60,
+    "brand_name": "Aspirin Cardio",
+    "generic_name": "Aspirin",
+    "composition": [
+      { "ingredient": "Aspirin", "strength": "100", "unit": "mg" }
+    ],
+    "composition_hash": "aspirin_100mg",
+    "manufacturer": "Bayer",
+    "price": 25,
+    "form": "Tablet",
+    "pack_size": 14,
+    "uses": [
+      "Cardiovascular protection"
+    ],
+    "side_effects": [
+      "Bleeding"
+    ],
+    "prescription_required": true,
+    "what_it_does": "Antiplatelet agent.",
+    "contraindications": [
+      "Active bleeding"
+    ],
+    "drug_interactions": [
+      "NSAIDs"
+    ],
+    "dosage": "75–325 mg daily.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 61,
+    "brand_name": "Bactoclav",
+    "generic_name": "Amoxicillin + Clavulanic Acid",
+    "composition": [
+      { "ingredient": "Amoxicillin", "strength": "500", "unit": "mg" },
+      { "ingredient": "Clavulanic Acid", "strength": "125", "unit": "mg" }
+    ],
+    "composition_hash": "amoxicillin_500mg+clavulanic_acid_125mg",
+    "manufacturer": "Macleods",
+    "price": 100,
+    "form": "Tablet",
+    "pack_size": 6,
+    "uses": [
+      "Infections"
+    ],
+    "side_effects": [
+      "Diarrhea"
+    ],
+    "prescription_required": true,
+    "what_it_does": "Beta-lactam + beta-lactamase inhibitor.",
+    "contraindications": [
+      "Penicillin allergy"
+    ],
+    "drug_interactions": [
+      "Probenecid"
+    ],
+    "dosage": "1 tablet twice daily.",
+    "storage": "Store below 25°C."
+  },
+  {
+    "id": 62,
+    "brand_name": "Cilamin",
+    "generic_name": "Cilostazol",
+    "composition": [
+      { "ingredient": "Cilostazol", "strength": "50", "unit": "mg" }
+    ],
+    "composition_hash": "cilostazol_50mg",
+    "manufacturer": "Lupin",
+    "price": 120,
+    "form": "Tablet",
+    "pack_size": 30,
+    "uses": [
+      "Intermittent claudication"
+    ],
+    "side_effects": [
+      "Headache",
+      "Diarrhea"
+    ],
+    "prescription_required": true,
+    "what_it_does": "PDE3 inhibitor; antiplatelet and vasodilator.",
+    "contraindications": [
+      "Heart failure"
+    ],
+    "drug_interactions": [
+      "CYP3A4 inhibitors"
+    ],
+    "dosage": "100 mg twice daily.",
+    "storage": "Store below 30°C."
+  },
+  {
+    "id": 63,
+    "brand_name": "Dapson",
+    "generic_name": "Dapsone",
+    "composition": [
+      { "ingredient": "Dapsone", "strength": "100", "unit": "mg" }
+    ],
+    "composition_hash": "dapsone_100mg",
+    "manufacturer": "Pfizer",
+    "price": 20,
+    "form": "Tablet",
+    "pack_size": 10,
+    "uses": [
+      "Leprosy",
+      "Dermatitis herpetiformis"
+    ],
+    "side_effects": [
+      "Hemolytic anemia"
+    ],
+    "prescription_required": true,
+    "what_it_does": "Sulfone antibiotic.",
+    "contraindications": [
+      "G6PD deficiency"
+    ],
+    "drug_interactions": [
+      "Rifampicin"
+    ],
+    "dosage": "50–100 mg daily.",
+    "storage": "Store below 30°C."
   },
   {
     id: 2,
@@ -613,7 +2657,7 @@ export const MedicineAlternativesFinder: FC = (): JSX.Element => {
                 <div className="rounded-2xl border border-slate-100 bg-slate-50/60 p-4">
                   <p className="mb-3 text-sm font-semibold text-slate-700">Quick picks</p>
                   <div className="flex flex-wrap gap-2">
-                    {["Crocin 650", "Combiflam", "Augmentin 625", "Dolo 650", "Saridon"].map(
+                    {["Augmentin 1000 Duo", "Combiflam", "Augmentin 625", "Dolo 650", "Saridon"].map(
                       (med) => (
                         <button
                           key={med}
