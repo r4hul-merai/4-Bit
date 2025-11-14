@@ -1,0 +1,22 @@
+fastapi
+uvicorn[standard]
+pydantic
+requests
+beautifulsoup4
+lxml
+urllib3
+python-dotenv
+ 
+# Transformers + Torch + PIL
+transformers
+torch
+Pillow
+ 
+# Optional but recommended for some HTML parsing
+soupsieve
+ 
+# If you use quantization or GPU features (optional)
+accelerate
+ 
+# For datetime handling
+python-dateutil
